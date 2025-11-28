@@ -1,0 +1,276 @@
+/*
+Author: Chisom Okafor
+Date: 22/10/2025
+File Name: styles.css
+*/
+
+/* CSS reset */
+body, header, nav, main, footer, h1, div, img, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #3BAFDA;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    top: 0;
+    background-color: #3BAFDA;
+    height: 190px;
+}
+
+header img {
+    margin: 0 auto;
+}
+
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    font-size: 1.5em;
+    font-family: Verdana, Arial, sans-serif;
+    border-top: 1px solid #fff;
+}
+
+nav li a {
+    display: block;
+    color: #333333;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.mobile {
+    display: block;
+}
+
+.action {
+    font-size: 1.35em;
+    color: hsl(0, 86%, 28%);
+    font-weight: bold;
+}
+
+main {
+    clear: left;
+    background-color: hsl(180, 23%, 91%);
+    padding: 2%;
+    font-size: 1.15em;
+    /* FIX: This ensures the grey background stretches to contain floating elements */
+    overflow: auto; 
+}
+
+.hours {
+    margin-left: 10%;
+}
+
+.tel-link {
+    background-color: #404040;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tel-link:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    color: #3BAF;
+    text-decoration: none;
+}
+
+/* --- SERVICE BOXES (Global / Mobile Defaults) --- */
+/* FIX: Removed 'float' and 'width' from here so they stack on mobile */
+#X-rays,
+#cleanings,
+#physical-examination,
+#Dental-checkups, /* FIX: Corrected capitalization to match HTML */
+#Nutritional-guidance {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: hsl(156, 24%, 96%);
+    padding: 1% 2%;
+    margin-bottom: 20px; /* Adds space between items on mobile */
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px) {
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    header {
+        position: static;
+        padding-bottom: 2%;
+    }
+
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+
+    .btn {
+        grid-column: 1 / span 3;
+    }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px) {
+
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+
+    nav {
+        float: right;
+        width: 70%;
+        margin: 4em 1em 0 0;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    main {
+        clear: left;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    /* --- DESKTOP SERVICE LAYOUT --- */
+    /* FIX: Moved the column layout logic HERE */
+    #X-rays,
+    #cleanings,
+    #physical-examination,
+    #Dental-checkups,
+    #Nutritional-guidance {
+        width: 29%;     /* Sets the width for 3 columns */
+        float: left;    /* Floats them side by side */
+        margin: 0 2% 2% 0; /* Adds spacing between the boxes */
+        clear: none;    /* Ensures they don't force new lines */
+        height: 450px;  /* Optional: Ensures boxes are same height for neatness */
+    }
+}
+
+/* Typography styles */
+#X-rays,
+#cleanings,
+#physical-examination,
+#Dental-checkups,
+#Nutritional-guidance,
+dt {
+    font-weight: lighter;
+}
+
+#X-rays,
+#cleanings,
+#physical-examination,
+#Dental-checkups,
+#Nutritional-guidance dd {
+    padding: 0.5% 1% 2% 0;
+}
+
+#form {
+    margin-top: 2%;
+    background-color: #f2f2f2;
+    padding: 2%;
+}
+
+#form h2 {
+    text-align: center;
+}
+
+fieldset, input, select, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 3%;
+}
+
+form #submit {
+    margin: 0 auto;
+    border: none;
+    display: block;
+    padding: 2%;
+    background-color: #b3b3b3;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+footer p {
+    font-size: 0.75em;
+    text-align: center;
+    color: #fff;
+    padding: 0 1em;
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: none;
+}
